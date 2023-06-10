@@ -9,7 +9,7 @@ impl Vec3 {
         Vec3 { v: [ x, y, z ] }
     }
 
-    pub fn lenth(self) -> f64 {
-        0.0 
+    pub fn length(self) -> f64 {
+        (self.v[0] * self.v[0] + self.v[1] * self.v[1] + self.v[2] * self.v[2]).sqrt()
     }
 }
