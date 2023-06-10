@@ -13,3 +13,15 @@ impl Vec3 {
         (self.v[0] * self.v[0] + self.v[1] * self.v[1] + self.v[2] * self.v[2]).sqrt()
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::Vec3;
+    #[test]
+    fn test_vector_length() {
+        assert_eq!(
+            Vec3::new(12.0, 5.0, -9.0).length(),
+            250_f64.sqrt()
+        )
+    }
+}
