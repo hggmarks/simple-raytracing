@@ -10,13 +10,39 @@ impl Vec3 {
         Vec3 { v: [ x, y, z ] }
     }
 
+    pub fn x(self) -> f64 {
+        self.v[0]
+    }
+
+    pub fn y(self) -> f64 {
+        self.v[1]
+    }
+
+    pub fn z(self) -> f64 {
+        self.v[2]
+    }
+    
+    pub fn r(self) -> f64 {
+        self.v[0]
+    }
+
+    pub fn g(self) -> f64 {
+        self.v[1]
+    }
+
+    pub fn b(self) -> f64 {
+        self.v[2]
+    }
+
+
     pub fn length(self) -> f64 {
         (self.v[0] * self.v[0] + self.v[1] * self.v[1] + self.v[2] * self.v[2]).sqrt()
     }
     
-    pub fn unit_vector(v: Vec3) -> Vec3 {
-        v / v.length()
+    pub fn unit_vector(v: &Vec3) -> Vec3 {
+        *v / v.length()
     }
+
 }
 
 use ops::Add;
